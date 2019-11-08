@@ -28,12 +28,12 @@
             background-color: #c9c9c9;
         }
 
-    a {
+    .link {
         color: #000000;
         text-decoration: none;
     }
 
-        a:hover {
+        .link:hover {
             color: black;
             text-decoration: none;
         }
@@ -55,15 +55,15 @@
         if (description.Length > 110) { description = item.Description.Substring(0, 110) + "..."; }
         if (count == 0) { style = "background-color: #F3F3F3;"; count++; }
         else { style = "background-color: #BEDCE6;"; count = 0; }
-        <a asp-action="Details" asp-route-id="@item.ID">
+        <a class="link" asp-action="Details" asp-route-id="@item.ID">
             <div class="row product" style="@style">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="https://www.mv-nordic.com/wp-content/uploads/2017/11/CDORD_gradient.png" />
+                            <img src="@item.Image" width="100px" height="100px" />
                         </div>
                         <div class="col-md-8">
-                            <h3>@item.Titel</h3>
+                            <h3>@item.Name</h3>
                         </div>
                     </div>
                 </div>
