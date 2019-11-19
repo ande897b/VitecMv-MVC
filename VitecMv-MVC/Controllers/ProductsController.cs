@@ -19,7 +19,7 @@ namespace VitecMv_MVC.Controllers
         private readonly VitecMv_MVCContext _context;
         private readonly ILogger _logger;
         private readonly WebClient webClient = new WebClient();
-        private readonly string urlApi = "https://localhost:44370/api/product/";
+        private readonly string urlApi = "https://vitecmv-api.azurewebsites.net/api/product/";
 
         public ProductsController(VitecMv_MVCContext context, ILogger<ProductsController> logger)
         {
